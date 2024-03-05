@@ -1,4 +1,6 @@
-In November 2022, the HEP Software Foundation and the Institute for Research and Innovation for Software in High-Energy Physics organized a workshop on the topic of Software Citation and Recognition in HEP.
-The goal of the workshop was to bring together different types of stakeholders whose roles relate to software citation, and the associated credit it provides, in order to engage the community in a discussion on: the ways HEP experiments handle citation of software, recognition for software efforts that enable physics results disseminated to the public, and how the scholarly publishing ecosystem supports these activities.
-Reports were given from the publication board leadership of the ATLAS, CMS, and LHCb experiments and HEP open source software community organizations (ROOT, Scikit-HEP, MCnet), and perspectives were given from publishers (Elsevier, JOSS) and related tool providers (INSPIRE, Zenodo).
-This paper summarizes key findings and recommendations from the workshop as presented at the 26th International Conference on Computing in High Energy and Nuclear Physics (CHEP 2023).
+In this paper we describe the development of a streamlined framework for large-scale ATLAS pMSSM reinterpretations of LHC Run-2 analyses using containerised computational workflows.
+The project is looking to assess the global coverage of BSM physics and requires running O(5k) computational workflows representing pMSSM model points.
+Following ATLAS Analysis Preservation policies, many analyses have been preserved as containerised Yadage workflows, and after validation were added to a curated selection for the pMSSM study.
+To run the workflows at scale, we utilised the REANA reusable analysis platform. We describe how the REANA platform was enhanced to ensure the best concurrent throughput by internal service scheduling changes.
+We discuss the scalability of the approach on Kubernetes clusters from 500 to 5000 cores.
+Finally, we demonstrate a possibility of using additional ad-hoc public cloud infrastructure resources by running the same workflows on the Google Cloud Platform.
