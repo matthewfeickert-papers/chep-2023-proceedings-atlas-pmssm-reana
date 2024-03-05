@@ -26,11 +26,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Compile LaTeX document
-      uses: xu-cheng/texlive-action/full@v1
+      uses: xu-cheng/texlive-action@v2
       with:
+        scheme: full
         run: |
           apk add make sed
           make document
@@ -40,15 +41,16 @@ jobs:
         ls -lhtra
 
     - name: Upload pdf
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: proceedings
         path: 'chep_2023_proceedings.pdf'
 
     - name: Build arXiv archive
       if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-      uses: xu-cheng/texlive-action/full@v1
+      uses: xu-cheng/texlive-action@v2
       with:
+        scheme: full
         run: |
           apk add make
           make arXiv
@@ -60,22 +62,25 @@ jobs:
 
     - name: Upload arXiv archive
       if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: submit_to_arXiv
         path: 'submit_to_arXiv'
 
   deploy:
+
+    name: Deploy GitHub Pages
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: [build]
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
 
     steps:
     - name: Setup Pages
-      uses: actions/configure-pages@v3
+      uses: actions/configure-pages@v4
 
     - name: Create site directory structure
       run: |
@@ -83,7 +88,7 @@ jobs:
         touch _site/index.html
         touch _site/.nojekyll
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4
       with:
         name: proceedings
         path: '_site/'
@@ -99,8 +104,8 @@ jobs:
         done
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-pages-artifact@v3
 
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
