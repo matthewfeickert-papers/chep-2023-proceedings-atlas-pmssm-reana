@@ -1,0 +1,43 @@
+\section{Current State of Software Citation in HEP}\label{sec:current_state}
+
+\subsection{LHC Experiments}\label{sec:lhc_experiments}
+
+To understand the current state of software citation in the field reports from the ATLAS, CMS, and LHCb experiments were given that summarized the experiments' current standards and practices and future plans.
+ATLAS takes the approach of using a ``catch-all'' citation of all ATLAS software and firmware through the citation of an ATLAS public note that ``briefly describes the software and provides links to dynamic and persistent repositories wherein the code resides''~\cite{ATL-SOFT-PUB-2021-001}.
+This public note is then cited in many ATLAS papers.
+ATLAS additionally cites the paper for the ATLAS detector simulation software~\cite{SOFT-2010-01} as well as GEANT4~\cite{GEANT4:2002zbu}, and the Monte Carlo simulation generators used~\cite{Sjostrand:2007gs,Sjostrand:2014zea,Alwall:2014hca,Sherpa:2019gpd}.
+In terms of statistical analysis ATLAS cites the methodology papers that describe the techniques used in analyses, but in general does not cite the actual software that implements the techniques, with the notable exception of machine learning libraries~\cite{chollet2015keras,tensorflow2015-whitepaper}.
+Citation practices are not uniformly consistent in the experiment though, with some physics groups beginning to regularly cite statistical libraries that provide clear citation guidelines~\cite{pyhf,pyhf_joss} (Principles 1 and 2).
+
+CMS similarly has an established culture of regularly and consistently citing Monte Carlo generators, GEANT4, and machine learning tools.
+However, they note there could be improvement in the citation of the software that CMS itself produces, both in experimental internal notes and documentation as well as scientific publications.
+CMS also expressed positive views towards starting practices of publishing papers --- either as CMS Collaboration publications or as limited authorship papers from the CMS Software and Computing Group --- on CMS software, bringing with it increased visibility of scientific software development, documentation standards, and references of software version information (Principles 1 and 2).
+
+LHCb has taken a more proactive stance on software citation following recommendations presented at the CHEP 2018 Conference~\cite{CHEP-2018-recommendations} by providing an internal LHCb software citation starting template for software commonly used in analysis.
+Analysis teams are then encouraged to revise the template with the citations of the software used in their analysis with the goal that all high-level software used is properly cited (Principles 1, 2, and 6).
+These practices are encouraged in the collaboration, but not explicitly required, and so analysis teams may require citation guidelines to be provided.
+LHCb also noted that the citation practices of the HEP community are largely due to cultural norms rather than technical challenges, and that while LHCb strives to be citing more software in the future having LHC community recommendations on software citation would be useful for motivating better practices.
+
+\subsection{Software Projects}\label{sec:software_projects}
+
+Views from prominent open source software projects and software communities inside of HEP were also discussed, with a broad range of community cultural views and practices.
+The ROOT team noted they explicitly are not interested in ROOT's software citation, as the ROOT team does not view it as adding value to their work, that updating citation information would require additional effort, and in the team's view the current HEP culture of citation with journal publications for larger software projects is working well.
+The ROOT team was careful to note though that these views are specifically limited to software citation for ROOT~\cite{Brun:1997pa} and should not be viewed as being universal.
+In contrast, the Scikit-HEP community project has prioritized adopting software citation recommendations and tooling from the broader scientific open source community (e.g. Zenodo~\cite{zenodo}, \texttt{CITATION.cff} files~\cite{Druskat_Citation_File_Format_2021}) to provide credit to the developers producing community tools (Principle 2) as well as recognize project contributions of multiple types~\cite{all-contributors}.
+Scikit-HEP views software citation as important to their community and would welcome HEP community guidelines to guide users of the community tools to easily and correctly cite the software.
+The MCnet community noted that as a community of Monte Carlo generator software projects they have benefited from consistent citation by the LHC experiments.
+Several community factors lead to this culture, including the MCnet community becoming organized in the leadup to the start of the LHC and providing clear citation guidelines and often making programmatic citation information available from the software itself.
+MCnet raised the potential problems with the current citation model of citing papers for large releases of the software as this does not equally value or reward the development and maintenance labor that occurs between the long intervals between publications.
+As a result, MCnet is interested in both technical solutions as well as community guidelines and policy regarding software citation.
+
+
+\subsection{Publishing Community}\label{sec:publishers}
+
+Following the state of software citation in the HEP community, views and recommendations from INSPIRE, Elsevier, and JOSS were shared given their different roles related to scientific publishing and citation.
+INSPIRE is an integral part of how HEP interacts with publications, related metadata, and acquires updated citation information as tracked submissions move from preprints to publication.
+Having these capabilities for the citation information for software in HEP would be a technical boon.
+While INSPIRE currently only handles software papers, there are plans to add support for data products and software in the future, initially by harvesting metadata from relevant trusted repositories (e.g. INSPIRE HEP Zenodo community, HEPData, CERN Open Data portal).
+This information would be gathered by software digital object identifier (DOI), and could be aggregated across multiple releases of the same software.
+It is therefore important that software projects that seek citations in the future provide DOIs now (Principles 3, 5, and 6).
+Elsevier noted that it is the responsibility of the scientific community to reach a consensus on how to cite software and to share these guidelines with publishers, which can then better instruct journal editors and referees what the expectations for citation are and how to support them.
+JOSS noted that in addition to incentivizing high quality research software with the journal guidelines and review standards, JOSS can also help bridge the cultural and technical gaps between traditional publication citation and the citation of software directly.
