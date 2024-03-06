@@ -52,7 +52,7 @@ jobs:
       with:
         scheme: full
         run: |
-          apk add make
+          apk add make sed
           make arXiv
 
     - name: Unpack archive
