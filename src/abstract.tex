@@ -1,0 +1,6 @@
+In this paper we describe the development of a streamlined framework for large-scale ATLAS pMSSM reinterpretations of LHC Run-2 analyses using containerised computational workflows.
+The project is looking to assess the global coverage of BSM physics and requires running O(5k) computational workflows representing pMSSM model points.
+Following ATLAS Analysis Preservation policies, many analyses have been preserved as containerised Yadage workflows, and after validation were added to a curated selection for the pMSSM study.
+To run the workflows at scale, we utilised the REANA reusable analysis platform. We describe how the REANA platform was enhanced to ensure the best concurrent throughput by internal service scheduling changes.
+We discuss the scalability of the approach on Kubernetes clusters from 500 to 5000 cores.
+Finally, we demonstrate a possibility of using additional ad-hoc public cloud infrastructure resources by running the same workflows on the Google Cloud Platform.

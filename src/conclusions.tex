@@ -1,0 +1,13 @@
+\section{Conclusions}\label{sec:conclusions}
+
+ATLAS searches for new physics are being effectively preserved together with containerised computational workflow recipes as part of the ATLAS RECAST project.
+This enables their future reuse and reinterpretation and greatly facilitates the running of efficient pMSSM studies over a large collection of individual analyses.
+
+We have launched several ATLAS pMSSM workflows on the REANA reproducible analysis platform and studied the performance from workflow scheduling up to workflow execution and termination procedures with the aim of allowing running several thousands of these workflows to cover a sufficient number of pMSSM model points.
+
+The REANA platform has been internally optimised to allow faster workflow scheduling, processing and terminating procedures on an individual workflow level as well as under the stressing conditions of processing many incoming concurrent workloads.
+A set of benchmarking experiments allowed to optimise and tune the REANA system for the pMSSM workloads on the Kuberentes clusters ranging from medium to large sizes (from 500 to 5000 cores).
+It was essential to adjust REANA scheduling parameters to the type of the pMSSM workload in order to ensure the best throughput and the efficient cluster CPU and memory resource utilisation.
+
+The developed system was tested on the CERN Computer Centre as well as on the Google Cloud Platform in order to ensure the reproducibility of the approach and is fully ready to run large-scale ATLAS pMSSM reinterpretations of LHC Run-2 analyses.
+The first results by the ATLAS collaborations are being published~\cite{ATLAS:2023oun}.

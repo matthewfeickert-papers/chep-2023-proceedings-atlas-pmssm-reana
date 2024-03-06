@@ -1,0 +1,57 @@
+\documentclass{latex/webofc}
+\input{latex/packages.tex}
+%
+\begin{document}
+
+%
+\title{Software Citation in HEP: Current State and Recommendations for the Future}
+
+\title{Scalable ATLAS pMSSM computational workflows using containerised REANA reusable analysis platform}
+
+\author{\firstname{Marco} \lastname{Donadoni} \inst{1} \and
+        \firstname{Matthew} \lastname{Feickert} \inst{2} \and
+        \firstname{Lukas} \lastname{Heinrich} \inst{3} \and
+        \firstname{Yang} \lastname{Liu} \inst{4} \and
+        \firstname{Audrius} \lastname{Me\v cionis} \inst{1} \and
+        \firstname{Vladyslav} \lastname{Moisieienkov} \inst{1} \and
+        \firstname{Tibor} \lastname{\v Simko} \inst{1} \fnsep\thanks{Corresponding author \email{tibor.simko@cern.ch}} \and
+        \firstname{Giordon} \lastname{Stark} \inst{5} \and
+        \firstname{Marco} \lastname{Vidal Garc\'{\i}a} \inst{1}}
+
+\institute{CERN, Geneva, Switzerland \and
+           University of Wisconsin--Madison, Madison, United States \and
+           Max-Planck-Institut f\"ur Physik, M\"unchen, Germany \and
+           Sun Yat-Sen University, China \and
+           SCIPP, UC Santa Cruz, United States}
+
+\abstract{%
+ \input{src/abstract}
+}
+%
+\maketitle
+%
+
+\input{src/introduction.tex}
+%
+\input{src/methods.tex}
+%
+\input{src/results.tex}
+%
+\input{src/conclusions.tex}
+%
+\input{src/acknowledgments.tex}
+
+\begin{thebibliography}{00}
+\bibitem{Cranmer:2010hk} K.~Cranmer, I.~Yavin, ``RECAST: Extending the Impact of Existing Analyses'', JHEP 1104:028 (2011), \texttt{https://doi.org/10.48550/arXiv.1010.2506}.
+\bibitem{ATLAS:2015wrn} ATLAS Collaboration, ``Summary of the ATLAS experiment's sensitivity to supersymmetry after LHC Run 1 - interpreted in the phenomenological MSSM'', JHEP \textbf{10} (2015), 134. \texttt{https://doi.org/10.48550/arXiv.1508.06608}.
+\bibitem{Simko:2018zzz} T.~\v{S}imko,  L.~Heinrich,  H.~Hirvonsalo,  D.~Kousidis,  D.~Rodr\'{\i}guez, ``REANA: A system for reusable research data analyses'', EPJ Web of Conferences 214, 06034 (2019), \texttt{https://doi.org/10.1051/epjconf/201921406034}.
+\bibitem{ATLAS:2023oun} ATLAS Collaboration, ``ATLAS Run 2 searches for electroweak production of supersymmetric particles interpreted within the pMSSM'', ATLAS-CONF-2023-055 (13 Sep 2023). \texttt{https://cds.cern.ch/record/2870222}.
+\end{thebibliography}
+
+% Don't use \bibliographystyle
+% the style is already called in woc.bst, so ensure it is in the top level directory
+% \bibliography{bib/ref}  # Reproducing typesetting of accepted proceedings, so not using bibliography
+
+\end{document}
+
+<div id='footer'><table width='100%'><tr><td class='right'><a href='http://fusioninventory.org/'><span class='copyright'>FusionInventory 9.1+1.0 | copyleft <img src='/glpi/plugins/fusioninventory/pics/copyleft.png'/>  2010-2016 by FusionInventory Team</span></a></td></tr></table></div>
