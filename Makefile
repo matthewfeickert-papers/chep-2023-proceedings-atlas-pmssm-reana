@@ -62,8 +62,6 @@ final:
 	$(MAKE) lint
 
 arXiv: deep_clean text
-	# Get a minted cache
-	sed -i.bak 's/cache=false/cache=true/' latex/packages.tex
 	$(MAKE) text
 
 	mkdir submit_to_arXiv
@@ -79,11 +77,6 @@ arXiv: deep_clean text
 	if [ -f *.bst ]; then cp *.bst submit_to_arXiv; fi
 	# https://arxiv.org/help/00README
 	if [ -f 00README.XXX ]; then cp 00README.XXX submit_to_arXiv; fi
-
-	# Use cache for minted
-	# c.f. https://github.com/gpoore/minted/issues/113#issuecomment-223451550
-	mv _minted-$(FILENAME) submit_to_arXiv/_minted-ms
-	sed -i.bak 's/finalizecache/frozencache/' submit_to_arXiv/latex/packages.tex
 
 	mv submit_to_arXiv/$(FILENAME).tex submit_to_arXiv/ms.tex
 
