@@ -1,18 +1,13 @@
 \section{Conclusions}\label{sec:conclusions}
 
-Revisiting the software citation principles in the view of current approaches and technologies in HEP provides a structure for starting community guidelines:
+ATLAS searches for new physics are being effectively preserved together with containerised computational workflow recipes as part of the ATLAS RECAST project.
+This enables their future reuse and reinterpretation and greatly facilitates the running of efficient pMSSM studies over a large collection of individual analyses.
 
-\begin{enumerate}
-    \item \textbf{Importance}: As a field HEP understands software is important, but improvements could be made on views towards software as a research product.
-    \item \textbf{Credit and Attribution}: The giving of credit is improving in HEP, but the community can leverage software friendly journals (e.g., JOSS) to help accelerate this.
-    \item \textbf{Unique Identification}: Use of Zenodo archives already exists in HEP, which provides well integrated tooling for DOI generation.
-The use of \texttt{CITATION.cff} files in software repositories can help as well.
-    \item \textbf{Persistence}: Zenodo provides long term archival of source code and project metadata.
-    \item \textbf{Accessibility}: HEP is becoming more FAIR~\cite{wilkinson_fair_2016,chue_hong_neil_p_2022_6623556} focused, bringing with it an increased focus on accessibility.
-As \texttt{CITATION.cff} provides a common framework for metadata, adopting it as a community standard for software citation information allows for greater accommodation and discovery by citation discovery tools.
-    \item \textbf{Specificity}: Version numbers of software should be included in \texttt{CITATION.cff} files and the version used for analysis should be reported in publications.
-\end{enumerate}
+We have launched several ATLAS pMSSM workflows on the REANA reproducible analysis platform and studied the performance from workflow scheduling up to workflow execution and termination procedures with the aim of allowing running several thousands of these workflows to cover a sufficient number of pMSSM model points.
 
-It is seen there are both social and technical tooling challenges to be addressed to reach HEP community guidelines and recommendations for software citation.
-While there exist multiple practices towards software citation in the HEP community today, this should not be viewed as a large challenge towards global community standards adoption as variations in homogeneity of practice are common even in journal publication.
-The community wide agreement that software citation is important, should be practiced more often, and provides both social and technical benefits gives sufficient motivation to develop HEP community wide recommendations in the near future.
+The REANA platform has been internally optimised to allow faster workflow scheduling, processing and terminating procedures on an individual workflow level as well as under the stressing conditions of processing many incoming concurrent workloads.
+A set of benchmarking experiments allowed to optimise and tune the REANA system for the pMSSM workloads on the Kuberentes clusters ranging from medium to large sizes (from 500 to 5000 cores).
+It was essential to adjust REANA scheduling parameters to the type of the pMSSM workload in order to ensure the best throughput and the efficient cluster CPU and memory resource utilisation.
+
+The developed system was tested on the CERN Computer Centre as well as on the Google Cloud Platform in order to ensure the reproducibility of the approach and is fully ready to run large-scale ATLAS pMSSM reinterpretations of LHC Run-2 analyses.
+The first results by the ATLAS collaborations are being published~\cite{ref:ATLAS-CONF-2023-055}.
